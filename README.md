@@ -22,6 +22,7 @@ docker run -d -v /var/lib/mysql-container:/var/lib/mysql --name database -p 3306
 cd ..
 cd web
 docker docker run -d --name wordpress -p 8080:80 --link database:db web
+cd ..
 ```
 
 ###Database server container start command
