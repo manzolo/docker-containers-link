@@ -48,7 +48,7 @@ http://localhost:8080/
 ```
 
 #Dockerfile:
-[Database docker link](https://github.com/manzolo/docker-containers-link/blob/master/database/Dockerfile)
-[Web server docker link](https://github.com/manzolo/docker-containers-link/blob/master/web/Dockerfile)
+* [Database docker link](https://github.com/manzolo/docker-containers-link/blob/master/database/Dockerfile)
+* [Web server docker link](https://github.com/manzolo/docker-containers-link/blob/master/web/Dockerfile)
 
 
