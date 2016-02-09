@@ -1,7 +1,7 @@
 # docker-containers-link
 * How to build two container linked
-* * A web server container with nginx + wordpress
-* * A database server container with mysql server
+ * A web server container with nginx + wordpress
+ * A database server container with mysql server
 
 ##Build container database server
 ```bash
