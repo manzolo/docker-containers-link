@@ -38,8 +38,8 @@ cd ..
 -d : run container as daemon
 --name wordpress : create container with name "wordpress"
 -p 8080:80 : maps 8080 port of host to 80 port of container
---link db:database : enables wordpress container to communicate with database container and creates alias "db" to database. 
-  We have used this alias in the wp-config.php to specify database host.
+--link db:database : enables wordpress container to communicate with database container
+  and creates alias "db" to database. We have used this alias in the wp-config.php to specify database host.
 ```
 
 ##Navigate to
