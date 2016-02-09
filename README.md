@@ -1,4 +1,6 @@
 # docker-containers-link
+A project inspired by [www.tothenew.com](http://www.tothenew.com/blog/docker-dockerfile-and-communication-between-containers/)
+
 * How to build two container linked
  * A web server container with nginx + wordpress
  * A database server container with mysql server
@@ -21,7 +23,7 @@ cd database
 docker run -d -v /var/lib/mysql-container:/var/lib/mysql --name database -p 33060:3306 mysql
 cd ..
 cd web
-docker docker run -d --name wordpress -p 8080:80 --link database:db web
+docker run -d --name wordpress -p 8080:80 --link database:db web
 cd ..
 ```
 
