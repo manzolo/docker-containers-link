@@ -35,12 +35,8 @@ DATABASE_HOST => alias database nome host (see later...)
 
 ##Start containers (database first, web then)
 ```bash
-cd mysql
-docker run -d -v /var/lib/mysql-wordpress-container:/var/lib/mysql --name database -p 33060:3306 manzolo/mysql:v1
-cd ..
-cd webngnix
+docker run -d -v /var/lib/docker-mysql-wordpress:/var/lib/mysql --name database -p 33060:3306 manzolo/mysql:v1 
 docker run -d -P --name wordpress --link database:aliasdblink -p 8080:80 manzolo/webnginx:v1
-cd ..
 ```
 
 ###Database server container start command
