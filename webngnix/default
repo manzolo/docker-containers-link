@@ -1,0 +1,14 @@
+server {
+        listen 80 default_server;
+        listen [::]:80 default_server;
+       root /wordpress;
+       index index.html index.php index.htm index.nginx-debian.html;
+       server_name _;
+       location / {
+                try_files $uri $uri/ =404;
+        }
+       location ~ \.php$ {
+                include fastcgi_params;
+                fastcgi_pass unix:/var/run/php5-fpm.sock;
+        }
+}
