@@ -7,7 +7,7 @@ A project inspired by [www.tothenew.com](http://www.tothenew.com/blog/docker-doc
 
 ##Build container database server
 ```bash
-cd database
+cd mysql
 docker build --build-arg DATABASE_NAME=wpmanzolo --build-arg DATABASE_USER=manzolo --build-arg DATABASE_PASSWORD=manzolo -t manzolo/mysql:v1 .
 cd ..
 ```
@@ -20,7 +20,7 @@ DATABASE_PASSWORD => database user password
 ```
 ##Build container web server
 ```bash
-cd web
+cd webnginx
 docker build --build-arg DATABASE_NAME=wpmanzolo --build-arg DATABASE_USER=manzolo --build-arg DATABASE_PASSWORD=manzolo --build-arg DATABASE_HOST=aliasdblink -t manzolo/webnginx:v1 .
 cd ..
 ```
@@ -35,10 +35,10 @@ DATABASE_HOST => alias database nome host (see later...)
 
 ##Start containers (database first, web then)
 ```bash
-cd database
+cd mysql
 docker run -d -v /var/lib/mysql-wordpress-container:/var/lib/mysql --name database -p 33060:3306 manzolo/mysql:v1
 cd ..
-cd web
+cd webnginx
 docker run -d -P --name wordpress --link database:aliasdblink -p 8080:80 manzolo/webnginx:v1
 cd ..
 ```
