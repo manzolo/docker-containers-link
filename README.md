@@ -20,7 +20,7 @@ DATABASE_PASSWORD => database user password
 ```
 ##Build container web server
 ```bash
-cd webnginx
+cd webngnix
 docker build --build-arg DATABASE_NAME=wpmanzolo --build-arg DATABASE_USER=manzolo --build-arg DATABASE_PASSWORD=manzolo --build-arg DATABASE_HOST=aliasdblink -t manzolo/webnginx:v1 .
 cd ..
 ```
