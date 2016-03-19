@@ -38,7 +38,7 @@ DATABASE_HOST => alias database nome host (see later...)
 cd mysql
 docker run -d -v /var/lib/mysql-wordpress-container:/var/lib/mysql --name database -p 33060:3306 manzolo/mysql:v1
 cd ..
-cd webnginx
+cd webngnix
 docker run -d -P --name wordpress --link database:aliasdblink -p 8080:80 manzolo/webnginx:v1
 cd ..
 ```
